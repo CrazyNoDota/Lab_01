@@ -5,8 +5,9 @@ public class Main {
     //Main function for testing the solutions
     public static void main(String[] args) {
 
-        int arr[] = {3,2,4,1};
-        System.out.println(isPrime(20, 2));
+        int arr[] = {10,1,32,3,45};
+        System.out.println(findMin(arr[0], 0, arr)); // I start with giving the minimum as the first element
+        // the second parameter is the current element and the last argument is the array itself
 
     }
 
@@ -22,15 +23,15 @@ public class Main {
 
     //This is the fucntion to find the minimum element in the array
     //recursively 
-    static int findMin(int min, int n, int arr[]){
-        if(n==len(arr)){
-            return min;
+    static int findMin(int min, int n, int arr[]){ // the program starts with the min or first element
+        if(n==arr.length){ // The condition to exit recursion
+            return min; // returning the current minimum number
         }
 
-        if (min > arr[n]) {
-            return findMin(arr[n], n+1, arr);
+        if (min > arr[n]) { // we go through the every element of the array
+            return findMin(arr[n], n+1, arr);  // if the element is lower than we take it as minimum
         }else{
-            return findMin(min, n+1, arr);
+            return findMin(min, n+1, arr); // if
         }
 
     }
