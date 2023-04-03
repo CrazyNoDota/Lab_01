@@ -101,14 +101,19 @@ public class Main {
         // If n is greater than 1, recursively call the power function with "a" and "n-1" and multiply the result by "a"
         return power(a, n - 1) * a;
     }
+
+    // Declare a function named "printArrayInReverse" that takes in an integer "n" as an argument
     static void printArrayInReverse(int n){
-        if(n>0){
+        // Check if n is greater than 0
+        if(n > 0){
+            // If it is, read an integer input using the scanner "sc"
             int input = sc.nextInt();
-            printArrayInReverse(n-1);
+            // Recursively call the printArrayInReverse function with "n-1"
+            printArrayInReverse(n - 1);
+            // Output the input followed by a space to the console
             System.out.print(input);
             System.out.print(" ");
         }
-
     }
     static boolean isDigit(String s){
         for(int i = 0; i < s.length(); i++){
