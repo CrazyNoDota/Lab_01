@@ -12,15 +12,17 @@ public class Main {
 //        int arr[] = {3,2,4,1};
 //        System.out.println(findAverage(0,0,arr)); // as arguments, I give the sum of all elements the current element and the array itself
 
-        int n = 367;
-        if (isPrime(n, 2)){ // the number itself and the temp which is 2 because we are starting to divide the n by it
-            System.out.println("Prime");
-        }else{
-            System.out.println("Composite");
-        }
+//        int n = 367;
+//        if (isPrime(n, 2)){ // the number itself and the temp which is 2 because we are starting to divide the n by it
+//            System.out.println("Prime");
+//        }else{
+//            System.out.println("Composite");
+//        }
+
+        System.out.println(factorial(5));
     }
 
-
+    // Declaring a function
     static double findAverage(double sum, int n, int arr[]){
         // Check if we've processed all elements in the array
         if(n == arr.length){
@@ -47,7 +49,7 @@ public class Main {
         }
 
     }
-
+    // Declaring a function
     static boolean isPrime(int n, int temp) { // It is important to start from 2 when we are dealing with this function
         if (n <= 2 && n > 0) // if the number is too small the program exits
             return true;
@@ -61,11 +63,15 @@ public class Main {
         return isPrime(n, temp); // calling the function for every temporary number
     }
 
+    // Declare a function named "factorial" that takes in an integer "n" as an argument
     static int factorial(int n){
+        // Check if n is less than or equal to 0
         if (n <= 0){
+            // If it is, return 1 (since 0! and negative numbers are not defined)
             return 1;
         }
-        return n*factorial(n-1);
+        // If n is greater than 0, recursively call the factorial function with n-1 and multiply it by n
+        return n * factorial(n - 1);
     }
 
     static int fibonacci(int n){
