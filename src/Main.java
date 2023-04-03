@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner sc = new Scanner(System.in);
-
+    //Main function for testing the solutions
     public static void main(String[] args) {
 
         int arr[] = {3,2,4,1};
@@ -20,9 +20,10 @@ public class Main {
     }
 
 
-
+    //This is the fucntion to find the minimum element in the array
+    //recursively 
     static int findMin(int min, int n, int arr[]){
-        if(n==4){
+        if(n==len(arr)){
             return min;
         }
 
