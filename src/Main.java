@@ -115,12 +115,17 @@ public class Main {
             System.out.print(" ");
         }
     }
+    // Declare a function named "isDigit" that takes in a string "s" as an argument
     static boolean isDigit(String s){
+        // Loop through each character in the input string
         for(int i = 0; i < s.length(); i++){
+            // Check if the character is not between '1' and '9'
             if(s.charAt(i) < '1' || s.charAt(i) > '9'){
+                // If it is not, return false (since the input is not a digit)
                 return false;
             }
         }
+        // If all characters are digits, return true (since the input is a digit)
         return true;
     }
 
