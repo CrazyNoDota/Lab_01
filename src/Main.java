@@ -74,14 +74,21 @@ public class Main {
         return n * factorial(n - 1);
     }
 
+    // Declare a function named "fibonacci" that takes in an integer "n" as an argument
     static int fibonacci(int n){
+        // Check if n is less than or equal to 0
         if (n <= 0){
+            // If it is, return 0 (since the Fibonacci sequence starts with 0, 1, ...)
             return 0;
-        }else if (n == 1){
+        }
+        // Check if n is equal to 1 (the base case for the Fibonacci sequence)
+        else if (n == 1){
+            // If it is, return 1 (since the Fibonacci sequence starts with 0, 1, ...)
             return 1;
         }
 
-        return fibonacci(n-1)+fibonacci(n-2);
+        // If n is greater than 1, recursively call the fibonacci function with n-1 and n-2 and return the sum
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
     static int power(int a, int n){
