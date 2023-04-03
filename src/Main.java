@@ -137,11 +137,17 @@ public class Main {
     }
 
 
+    // Declare a function named "gcd" that takes in two integers "a" and "b" as arguments
     static int gcd(int a, int b){
+        // Check if b is equal to 0 (the base case of the Euclidean algorithm)
         if(b == 0){
+            // If it is, return a (which is the greatest common divisor of a and b)
             return a;
         }
+        // Print the current values of a and b to the console (optional, used for debugging purposes)
         System.out.println(a  + " " + b);
+        // Otherwise, return the result of recursively calling gcd with the values of b and the remainder of a divided by b
         return gcd(b, a % b);
     }
+
 }
