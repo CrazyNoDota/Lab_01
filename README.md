@@ -37,6 +37,6 @@ The main function is used to test the above functions by calling each function w
 
 To test a particular function, simply comment out the other function calls in the main function and uncomment the function call of the desired function. Then, run the program to see the result of the function call.
 
-Note: Some of the functions require user input from the console. Please provide the required input when prompted by the program.
+Note: Some of the functions are not listed in the main section. Write your own implementation to use them.
 
 
