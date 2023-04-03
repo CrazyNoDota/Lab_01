@@ -91,11 +91,15 @@ public class Main {
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
+    // Declare a function named "power" that takes in two integers "a" and "n" as arguments
     static int power(int a, int n){
+        // Check if n is equal to 1 (the base case for the power function)
         if(n == 1){
+            // If it is, return "a" (since any number raised to the power of 1 is itself)
             return a;
         }
-        return power(a, n-1)*a;
+        // If n is greater than 1, recursively call the power function with "a" and "n-1" and multiply the result by "a"
+        return power(a, n - 1) * a;
     }
     static void printArrayInReverse(int n){
         if(n>0){
