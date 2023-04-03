@@ -130,11 +130,12 @@ public class Main {
     }
 
 
+    // Declare a function named "bigC" that takes in two integers "n" and "r" as arguments
     static int bigC(int n, int r){
-
-        return factorial(n) / (factorial(n-r)*factorial(r));
-
+        // Return the result of n choose r using the formula for combinations: n! / ( (n-r)! * r! )
+        return factorial(n) / (factorial(n - r) * factorial(r));
     }
+
 
     static int gcd(int a, int b){
         if(b == 0){
