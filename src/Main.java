@@ -5,19 +5,24 @@ public class Main {
     //Main function for testing the solutions
     public static void main(String[] args) {
 
-        int arr[] = {10,1,32,3,45};
-        System.out.println(findMin(arr[0], 0, arr)); // I start with giving the minimum as the first element
-        // the second parameter is the current element and the last argument is the array itself
+//        int arr[] = {10,1,32,3,45};
+//        System.out.println(findMin(arr[0], 0, arr)); // I start with giving the minimum as the first element
+//        // the second parameter is the current element and the last argument is the array itself
 
+        int arr[] = {3,2,4,1};
+        System.out.println(findAverage(0,0,arr)); // as arguments, I give the sum of all elements the current element and the array itself
     }
 
+
     static double findAverage(double sum, int n, int arr[]){
-        if(n==arr.length){
-            return sum/ arr.length;
+        // Check if we've processed all elements in the array
+        if(n == arr.length){
+            // If we have, return the average by dividing the sum by the length of the array
+            return sum / arr.length;
         }
 
-        return findAverage(sum + arr[n], n+1, arr);
-
+        // If there are still elements to process, add the current element to the sum and recurse
+        return findAverage(sum + arr[n], n + 1, arr);
     }
 
 
