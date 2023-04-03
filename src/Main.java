@@ -9,8 +9,15 @@ public class Main {
 //        System.out.println(findMin(arr[0], 0, arr)); // I start with giving the minimum as the first element
 //        // the second parameter is the current element and the last argument is the array itself
 
-        int arr[] = {3,2,4,1};
-        System.out.println(findAverage(0,0,arr)); // as arguments, I give the sum of all elements the current element and the array itself
+//        int arr[] = {3,2,4,1};
+//        System.out.println(findAverage(0,0,arr)); // as arguments, I give the sum of all elements the current element and the array itself
+
+        int n = 367;
+        if (isPrime(n, 2)){ // the number itself and the temp which is 2 because we are starting to divide the n by it
+            System.out.println("Prime");
+        }else{
+            System.out.println("Composite");
+        }
     }
 
 
@@ -41,24 +48,23 @@ public class Main {
 
     }
 
-    static boolean isPrime(int n, int temp) {
-        if (n <= 2)
-            return (n == 2);
-        if (n % temp == 0) {
+    static boolean isPrime(int n, int temp) { // It is important to start from 2 when we are dealing with this function
+        if (n <= 2 && n > 0) // if the number is too small the program exits
+            return true;
+        if (n % temp == 0) { // If the number can be divided without left over than it is not Prime (exit condition)
             return false;
         }
-        if (temp * temp > n) {
+        if (temp * temp > n) { // the second exit condition because mathematically proven that all the numbers that can divide a certain number lie before the square of N
             return true;
         }
-        temp++;
-        return isPrime(n, temp);
+        temp++;// to go through all the numbers inside
+        return isPrime(n, temp); // calling the function for every temporary number
     }
 
     static int factorial(int n){
         if (n <= 0){
             return 1;
         }
-
         return n*factorial(n-1);
     }
 
